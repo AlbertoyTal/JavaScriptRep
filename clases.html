@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Clases</title>
+</head>
+
+<body>
+  <input type="button" value="Comer" onclick="sumarP();">
+  <input type="button" value="Correr" onclick="restarP();">
+  <script>
+    class Humano {
+      constructor(edad, peso) {
+        this._hEdad = edad;
+        this._hPeso = peso;
+      }
+      get hEdad() {
+        return this._hEdad;
+      }
+      set hEdad(x) {
+        this._hEdad = x;
+      }
+      get hPeso() {
+        return this._hPeso;
+      }
+      set hPeso(x) {
+        this._hPeso = x;
+
+      }
+    }
+    myHumano = new Humano(30, 86);
+    document.write('</br>Manolo tiene ' + '<div id="miDiv1">' + myHumano.hEdad + '</div> años');
+    document.write('</br></br>Y pesa ' + '<div id="miDiv">' + myHumano.hPeso + '</div>');
+    class Alien extends Humano {
+    }
+    myAlien = new Alien(303457, 20);
+    document.write('------------------------------------------------------------------------</br>');
+    document.write('------------------------------------------------------------------------');
+    document.write('</br>AGHEHbw tiene ' + '<div id="miDiv3">' + myAlien.hEdad + '</div> años');
+    document.write('</br></br>Y pesa ' + '<div id="miDiv2">' + myAlien.hPeso + '</div>');
+    function sumarP() {
+      var peso = myHumano.hPeso;
+      myHumano.hPeso++;
+      var peso1 = myAlien.hPeso;
+      myAlien.hPeso++;
+      document.getElementById("miDiv2").innerHTML = peso1;
+      document.getElementById("miDiv").innerHTML = peso;
+    }
+
+    function restarP() {
+      var peso = myHumano.hPeso;
+      myHumano.hPeso--;
+      var peso1 = myAlien.hPeso;
+      myAlien.hPeso--;
+      document.getElementById("miDiv2").innerHTML = peso1;
+      document.getElementById("miDiv").innerHTML = peso;
+    }
+
+
+  </script>
+</body>
+
+</html>

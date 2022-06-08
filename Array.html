@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Array</title>
+
+</head>
+
+<body>
+  <script>
+    //Crea el array frutas
+    var frutas = ["Manzana", "Banana", "Kiwi"]
+    //Pide por consola cuantos datos contiene el array con el ".legth"
+    console.log(frutas.length)
+    //Pide por consola el dato almacenado en la posición 0
+    console.log(frutas[0])
+    //Pide por consola el dato almacenado en la última posición
+    console.log(frutas[frutas.length - 1])
+    //Recorre el array entero y devuelve por consola el elemento y su posición
+    frutas.forEach(function(elemento, indice, array) {
+    console.log(elemento, indice);
+    })
+    //Añade un nuevo elemento al array
+    nuevoFin = frutas.push('Naranja')
+    console.log(frutas[frutas.length - 1])
+    //Elimina el último elemento
+    var elimUlt = frutas.pop()
+    console.log(frutas[frutas.length - 1])
+    //Añade un nuevo elemento al principio del array
+    var nuevoComienzo = frutas.unshift('Fresa')
+    console.log(frutas[0])
+    //Eliminar el primero
+    var elimPrimero = frutas.shift()
+    console.log(frutas[0])
+    //Pide el índice de un elemento
+    var posicion = frutas.indexOf('Banana')
+    console.log(posicion)
+    //Eliminar varios elementos, donde el primer valor desde que posición empieza
+    //y el segundo, la cantidad de elementos que queremos eliminar
+    var elimVarios = frutas.splice(1,1)
+    console.log(frutas)
+    //Crea un nuevo elemento llamado melocotón, con el indice 8
+    //y a continuación pide el indice de cada elemento
+    frutas[8]="melocotón";
+    console.log(Object.keys(frutas));
+  </script>
+</body>
+
+</html>

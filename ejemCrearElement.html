@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>clasesYobjetos</title>
+
+</head>
+
+<body>
+  <script>
+    //Crear nodo de tipo Element
+    var parrafo = document.createElement("p");
+    //Crear nodo de tipo Text
+    var contenido = document.createTextNode("Esto es un texto");
+    //Añadir el nodo Text como hijo del nodo tipo Element
+    parrafo.appendChild(contenido);
+    //Añadir el nodo Element como hijo de la pagina
+    document.body.appendChild(parrafo);
+    //También puedes realizar un document.write y escribir directamente el html
+    document.write('<p>Y esto otro</p>')
+  </script>
+</body>
+
+</html>

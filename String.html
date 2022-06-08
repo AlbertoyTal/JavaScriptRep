@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>String</title>
+
+</head>
+
+<body>
+  <script>
+    //Crea una string primitiva
+    var s1 = '2 + 2'
+    console.log(eval(s1))
+    //Crea un objeto String
+    var s2 = new String('2 + 2')
+    console.log(eval(s2))
+    //Crea un objeto String y pide la letra en la primera posición
+    var s3 = new String('Caramelo')
+    console.log(s3.charAt(0))
+    //Crea dos string primitivas
+    var s4 = 'Hello';
+    var s5 = 'World';
+    //Concatena las dos cadenas y las pide por consola
+    console.log(s4.concat(' ', s5));
+    console.log(s5.concat(', ', s4));
+    //Crea una cadena primitiva y busca con el metodo de estancia,
+    //si una palabra coincide con la cadana con la que la compara,
+    //devuelve un true si esta contiene esa cadena de caracteres
+    var s6 = 'Tapón es muy bueno hasta que se le va la pinza';
+    var palabra = 'pinza';
+    console.log(s6.includes(palabra));
+    //Crea una cadena primitiva y busca con el metodo de estancia,
+    //si la última palabra coincide con la cadana con la que la compara,
+    //devuelve un true si esta contiene esa cadena de caracteres
+    var s7 = 'Los perros son el mejor amigo del hombre';
+    console.log(s7.endsWith('hombre'));
+    //Crea una cadena primitiva y devuelve la posición
+    //de la primera "y" que encuentra en la cadena
+    var cualquierCadena="Ojalá poder volar y tener super fuerza"
+    console.log('La posición de la primera "y" es ' +
+    cualquierCadena.indexOf("y"))
+    //Crea una cadena primitiva y devuelve la posición
+    //de la primera "a" que encuentra al final de cadena
+    var cualquierCadena="Ojalá poder volar y tener super fuerza"
+    console.log('La posición de la primera "a" es ' +
+    cualquierCadena.lastIndexOf("a"))
+    //Crea una cadena primitiva y una expresión regular, al pasarle el método
+    //".match" se queda sólo con la parte que cumple la expresión
+    //y crea un array con ello
+    var cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var expresion = /[A-E]/gi;
+    var array_emparejamientos = cadena.match(expresion);
+    console.log(array_emparejamientos);
+    //Crea una cadena primitiva y con el método ".slice" quita los caracteres
+    //que se encuentren en esa posición
+    var s8 = "La mañana se nos echa encima.";
+    var s9 = s8.slice(3, -2);
+    console.log(s9);
+    //Crea una cadena primitiva y con el método ".split" los separa,
+    //según el separador indicado
+    var s10 = "Hola Mundo. Cómo estás hoy?";
+    var divisiones = s10.split(" ");
+    console.log(divisiones);
+    //Crea una cadena primitiva y con el método ".substring"
+    //devuelve los carácteres colocados en la posición especificada
+    var s11 = "Mozilla";
+    print(s11.substring(0,3));
+  </script>
+</body>
+
+</html>

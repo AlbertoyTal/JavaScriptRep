@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Math</title>
+
+</head>
+
+<body>
+
+  <script>
+    //Crea la variable de tipo number y la pide por consola con el método
+    //".floor" que redonde hacia abajo
+    var numero1 = new Number("30.45");
+    console.log(Math.floor(numero1));
+    //Crea dos variables más de tipo number y pide por consola con el método
+    //".max" cual es el mayor de ellos
+    var numero2 = new Number("3");
+    var numero3 = new Number("45");
+    console.log(Math.max(numero1, numero3, numero2));
+    //Lo mismo que el anterior ejemplo pero con el método ".min"
+    //que devuelve el menor
+    console.log(Math.min(numero1, numero3, numero2));
+    //Crea una variable con un número aletorio debido al método ".random"
+    //y al usar el método ".floor" lo redonde hacia abajo
+    var aleatorio = new Number(Math.random()*10);
+    console.log(Math.floor(aleatorio));
+    //Crea dos variables que serán el máximo y el mínimo que luego será usado en
+    //la última variable para almacenar un valor alatorio entre esos dós números
+    var max = new Number("1");
+    var min = new Number("3");
+    var aleatorio2 = new Number(Math.random() * (max - min)) + min;
+    console.log(Math.floor(aleatorio2));
+  </script>
+</body>
+
+</html>
